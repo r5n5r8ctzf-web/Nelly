@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Feliz Cumpleaños Nayeli ❤️</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:linear-gradient(135deg,#ff758c,#ff7eb3,#ffb199);
+overflow-x:hidden;
+color:white;
+text-align:center;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:20px;
+position:relative;
+}
+
+h1{
+font-size:4rem;
+text-shadow:0 0 20px rgba(255,255,255,.7);
+}
+
+.subtitle{
+font-size:1.5rem;
+margin-top:10px;
+}
+
+.heart{
+font-size:5rem;
+animation:latido 1.2s infinite;
+margin:20px;
+}
+
+@keyframes latido{
+0%{transform:scale(1);}
+50%{transform:scale(1.25);}
+100%{transform:scale(1);}
+}
+
+.btn{
+margin-top:25px;
+padding:15px 35px;
+border:none;
+border-radius:40px;
+font-size:1.1rem;
+cursor:pointer;
+background:white;
+color:#ff4f85;
+font-weight:bold;
+box-shadow:0 0 20px rgba(255,255,255,.5);
+}
+
+.section{
+padding:60px 20px;
+}
+
+.slider{
+width:90%;
+max-width:800px;
+margin:auto;
+}
+
+.slider img{
+width:100%;
+height:550px;
+object-fit:cover;
+border-radius:20px;
+box-shadow:0 10px 40px rgba(0,0,0,.4);
+}
+
+.carta{
+max-width:900px;
+margin:auto;
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(10px);
+padding:40px;
+border-radius:25px;
+line-height:1.8;
+font-size:1.2rem;
+}
+
+.final{
+font-size:3rem;
+font-weight:bold;
+padding:80px 20px;
+text-shadow:0 0 15px white;
+}
+
+.flower{
+position:fixed;
+top:-100px;
+font-size:35px;
+animation:caer linear infinite;
+z-index:1;
+pointer-events:none;
+}
+
+@keyframes caer{
+0%{
+transform:translateY(-100px) rotate(0deg);
+}
+100%{
+transform:translateY(120vh) rotate(360deg);
+}
+}
+
+.balloon{
+position:fixed;
+bottom:-150px;
+font-size:50px;
+animation:subir linear infinite;
+z-index:1;
+pointer-events:none;
+}
+
+@keyframes subir{
+0%{
+transform:translateY(0);
+}
+100%{
+transform:translateY(-120vh);
+}
+}
+
+.contenido{
+position:relative;
+z-index:5;
+}
+
+audio{
+display:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<audio id="musica" loop>
+    <source src="vibra_perfecta.mp3" type="audio/mpeg">
+</audio>
+
+
+<script>
+
+for(let i=0;i<25;i++){
+
+let flor=document.createElement("div");
+flor.className="flower";
+flor.innerHTML="🌼";
+
+flor.style.left=Math.random()*100+"%";
+flor.style.animationDuration=(8+Math.random()*10)+"s";
+flor.style.fontSize=(25+Math.random()*30)+"px";
+
+document.body.appendChild(flor);
+
+}
+
+for(let i=0;i<12;i++){
+
+let globo=document.createElement("div");
+globo.className="balloon";
+
+const colores=["🎈","🎈","🎈","🎉"];
+
+globo.innerHTML=colores[Math.floor(Math.random()*colores.length)];
+
+globo.style.left=Math.random()*100+"%";
+globo.style.animationDuration=(12+Math.random()*8)+"s";
+
+document.body.appendChild(globo);
+
+}
+
+</script>
+
+<div class="contenido">
+
+<section class="hero">
+
+<div class="heart">🎂❤️🌼</div>
+
+<h1>Feliz Cumpleaños Nayeli</h1>
+
+<p class="subtitle">
+Hoy celebramos tus 25 años ✨
+</p>
+
+<p class="subtitle">
+Y nuestro primer año juntos ❤️
+</p>
+
+<button class="btn" onclick="iniciarMusica(); document.getElementById('galeria').scrollIntoView({behavior:'smooth'})">
+Abrir mi regalo 🎁
+</button>
+
+</section>
+
+<section id="galeria" class="section">
+
+<h2 style="margin-bottom:30px;font-size:2.5rem;">
+Nuestros Recuerdos 📸
+</h2>
+
+<div class="slider">
+<img id="foto" src="foto01.jpg">
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="carta">
+
+<h2>💌 Para Nayeli 💌</h2>
+
+<br>
+
+<p>
+
+Hoy es un día muy especial porque celebramos tus 25 años.
+Quiero que sepas que cada momento vivido contigo ha sido un regalo.
+
+Ayer cumplimos nuestro primer año de novios,
+365 días de experiencias, aprendizajes,
+risas, aventuras y momentos que guardo con muchísimo cariño.
+
+Gracias por cada sonrisa.
+Gracias por cada abrazo.
+Gracias por acompañarme en los días buenos y en los difíciles.
+
+Deseo que todos tus sueños se cumplan,
+que nunca te falten motivos para sonreír
+y que la vida te regale toda la felicidad que mereces.
+
+Si esta página pudiera resumirse en una sola frase,
+sería esta:
+
+</p>
+
+<br>
+
+<h2>❤️ Jamás dejaré de quererte ❤️</h2>
+
+</div>
+
+</section>
+
+<div class="final">
+
+🎂 Feliz Cumpleaños 25 🎂
+
+<br><br>
+
+🌼 Te Amo Nayeli 🌼
+
+</div>
+
+</div>
+
+<script>
+
+const fotos = [];
+
+for(let i = 1; i <= 33; i++){
+    fotos.push(`foto${String(i).padStart(2,'0')}.jpeg`);
+}
+
+let actual = 0;
+
+const img = document.getElementById("foto");
+
+setInterval(()=>{
+
+    actual++;
+
+    if(actual >= fotos.length){
+        actual = 0;
+    }
+
+    img.style.opacity = 0;
+
+    setTimeout(()=>{
+
+        img.src = fotos[actual];
+        img.style.opacity = 1;
+
+    },400);
+
+},3000);
+
+function iniciarMusica(){
+    const musica = document.getElementById("musica");
+    musica.play();
+}
+
+</script>
+
+</body>
+</html>
